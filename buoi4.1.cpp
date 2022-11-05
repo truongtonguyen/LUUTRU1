@@ -5,7 +5,9 @@ int timmax(int a[10][10], int m, int n);
 int timmin(int a[10][10], int m, int n);
 int ktraSNT(int n);
 int songuyento(int a[10][10], int m, int n);
-
+void giatrix(int a[10][10], int m, int n);
+void yenngua(int a[10][10], int m, int n);
+void sapxep(int a[10][10], int m, int n);
 int main()
 {
 	int a[10][10],m,n;
@@ -20,7 +22,10 @@ int main()
 	timmin(a,m,n);
 	ktraSNT(n);
 	songuyento(a,m,n);
-
+	giatrix(a,m,n);
+        yenngua(a,m,n);
+        sapxep(a,m,n);
+return 0;
 }
 
 void nhapmatran(int a[10][10], int m, int n)
@@ -59,7 +64,7 @@ int timmax(int a[10][10], int m, int n)
 	  	      max=a[i][j];
 	      }
       }
-    printf("\n Gia tri lon nhat la:a[%d][%d]",i,j);	
+    printf("\n Gia tri lon nhat la:%d",max);	
 return max;
 }
 
@@ -75,7 +80,7 @@ int timmin(int a[10][10], int m, int n)
 	  	      min=a[i][j];
 	      }
       }
-    printf("\n Gia tri nho nhat la:a[%d][%d]",i,j);	
+    printf("\n Gia tri nho nhat la:%d",min);	
 return min;
 }
 
@@ -112,4 +117,42 @@ int songuyento(int a[10][10], int m, int n)
 	  printf("\n Ma tran co %d so nguyen to, tong cac so nay la:%d",demnt,tong);
 }
 
+void giatrix(int a[10][10], int m, int n)
+{
+	int i,j;
+	int x,dem=0;
+	printf("\n Nhap gia tri x:");
+	scanf("%dd",&x);
+	  for(i=1;i<m;i++)
+	   {
+	   	for(j=1;j<n;j++)
+	   	dem++;
+	   	 {
+	   	 	if(a[i][j]=x)
+	   	 	printf("\n Gia tri %d xuat hien lan %d o vi tri a[%d][%d]",x,dem,i,j);
+	   	 }
+	   }
+}
+
+void yenngua(int a[10][10], int n, int m)
+{
+	int i,j;
+	int dem=0;
+	for(i=0;i<m;i++)
+	  {
+	  	for(j=0;j<n;j++)
+	  	  if(((a[i][j])==timmin(a,m,n)) && ((a[i][j])==timmax(a,m,n)));
+	  	    {
+	  	    	printf("\n a[%d][%d]=%d la mot diem yen ngua",i,j,a[i][j]);
+	  	    	dem++;
+	  	    } 
+	  }
+	if(dem==0)
+	printf("\n Khong co diem yen ngua nao");
+}
+
+void sapxep(int a[10][10], int m, int n)
+{
+	
+}
 
