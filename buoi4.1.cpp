@@ -47,8 +47,9 @@ void xuatmatran(int a[10][10], int m, int n)
 	  {
 	  	for(int j=0;j<n;j++)
 	  	  {
-	  	  	printf("%d   ;    ",a[i][j]);
+	  	  	printf("   %d   ",a[i][j]);
 	      }
+	  printf("\n");
       }
 }
 
