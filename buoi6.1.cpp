@@ -164,7 +164,7 @@ void NhapsvN(SINHVIEN a[],int n)
 
 void Xuatsv(SINHVIEN x)
 {
-	printf("|%5s|%-18s|%-6s|%10d|%-11s|%14.1f|%-10s|%-10s",x.Masv,x.Hotensv,x.Phai,x.Namsinh,x.Nganhhoc,x.Kqcuoikhoa,
+	printf("|%7s|%-18s|%-6s|%10d|%-11s|%14.1f|%-10s|%-10s",x.Masv,x.Hotensv,x.Phai,x.Namsinh,x.Nganhhoc,x.Kqcuoikhoa,
 	                                                                                                x.Xeploai,x.Quequan);
 }
 
@@ -173,11 +173,11 @@ void XuatsvN(SINHVIEN a[], int n)
 {
 	system("cls");
 	printf("\n\n|--------------------------------------------------------------------------------------------\n");
-	    printf("|Ma SV| Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai | Que quan |\n");
+	    printf("| Ma SV | Ho ten sinh vien | Phai | Nam sinh | Nganh hoc | KQ cuoi khoa | Xep loai | Que quan |\n");
 	    
 	  for(int i=0;i<n;i++)
 	   {
-	  printf("\n|-----|------------------|------|----------|-----------|--------------|----------|----------|\n");
+	  printf("\n|-------|------------------|------|----------|-----------|--------------|----------|----------|\n");
 	    Xuatsv(a[i]);
 	   }
 }
